@@ -1,0 +1,172 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Am's Scarlat La Passion</title>
+  <style>
+    :root {
+      --vermelho: #800000;
+      --dourado: #ffd700;
+      --fundo: #fffaf3;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--fundo);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--vermelho);
+      color: var(--dourado);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    nav button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: var(--dourado);
+      color: var(--vermelho);
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #ffcc00;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      display: none; /* Esconde as seções inicialmente */
+    }
+
+    section.active {
+      display: block; /* Exibe quando ativa */
+    }
+
+    section h2 {
+      color: var(--vermelho);
+      font-size: 1.8em;
+      border-left: 5px solid var(--dourado);
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    a.botao {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background-color: var(--vermelho);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a.botao:hover {
+      background-color: #a00000;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f2e2e2;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Am's Scarlat La Passion</h1>
+    <p>Perfume para todos, sem restrições.</p>
+    <img src="scarlat-perfume.jpg" alt="Perfume Scarlat La Passion">
+    <p><strong>Preço:</strong> R$ 110,00</p>
+   
+  </header>
+
+  <!-- Botões para exibir seções -->
+  <nav>
+    <button onclick="mostrarSecao('sobre')">Sobre Nós</button>
+    <button onclick="mostrarSecao('servicos')">Serviços</button>
+  </nav>
+
+  <section id="sobre" class="card">
+    <h2>Sobre Nós</h2>
+    <p>A Am's é uma empresa de perfumaria que atende todos os tipos de pessoas, inclusive quem possui alergia a perfumes.</p>
+    <p>Nosso objetivo é ser uma marca marcante e acessível, reconhecida pela qualidade dos nossos produtos.</p>
+  </section>
+
+  <section id="servicos" class="card">
+    <h2>Serviços</h2>
+    <ul>
+      <li>Perfumes unissex</li>
+      <li>Perfumes femininos</li>
+      <li>Perfumes masculinos</li>
+      <li>Perfumes infantis</li>
+      <li>Perfumes para peles sensíveis</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Am's Perfumaria. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function mostrarSecao(id) {
+      // Oculta todas as seções
+      document.querySelectorAll('section').forEach(secao => {
+        secao.classList.remove('active');
+      });
+
+      // Exibe a seção clicada
+      const secaoEscolhida = document.getElementById(id);
+      if (secaoEscolhida) {
+        secaoEscolhida.classList.add('active');
+        secaoEscolhida.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+</html>
