@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -57,11 +57,11 @@
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
-      display: none; /* Esconde as seções inicialmente */
+      display: none;
     }
 
     section.active {
-      display: block; /* Exibe quando ativa */
+      display: block;
     }
 
     section h2 {
@@ -120,9 +120,8 @@
   <header>
     <h1>Am's Scarlat La Passion</h1>
     <p>Perfume para todos, sem restrições.</p>
-    <img src="scarlat-perfume.jpg" alt="Perfume Scarlat La Passion">
+    <img src="https://github.com/user-attachments/assets/7fba9cf7-5d7e-4487-9840-4e511b28d854" alt="Perfume Scarlat La Passion">
     <p><strong>Preço:</strong> R$ 110,00</p>
-   
   </header>
 
   <!-- Botões para exibir seções -->
@@ -154,12 +153,10 @@
 
   <script>
     function mostrarSecao(id) {
-      // Oculta todas as seções
       document.querySelectorAll('section').forEach(secao => {
         secao.classList.remove('active');
       });
 
-      // Exibe a seção clicada
       const secaoEscolhida = document.getElementById(id);
       if (secaoEscolhida) {
         secaoEscolhida.classList.add('active');
