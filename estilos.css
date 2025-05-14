@@ -1,0 +1,213 @@
+/* Variáveis de cores para fácil manutenção */
+:root {
+    --vermelho-principal: #800000;
+    --dourado-principal: #ffd700;
+    --fundo-pagina: #fffaf3;
+    --branco-principal: #ffffff;
+    --sombra-suave: rgba(0, 0, 0, 0.15);
+    --fonte-principal: 'Montserrat', sans-serif; /* Definindo a fonte */
+}
+
+/* Estilos globais do body */
+body {
+    font-family: var(--fonte-principal); /* Usando a variável de fonte */
+    background-color: var(--fundo-pagina);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    scroll-behavior: smooth; /* Para rolagem suave ao clicar nos links */
+}
+
+/* Estilos do cabeçalho principal */
+.cabecalho-principal {
+    background: linear-gradient(to right, var(--vermelho-principal), #a52a2a);
+    color: var(--dourado-principal);
+    text-align: center;
+    padding: 60px 20px 40px;
+    box-shadow: 0 4px 20px var(--sombra-suave);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--sombra-suave);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.imagem-produto {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.produto {
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px var(--sombra-suave);
+}
+
+.cabecalho-principal h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.destaque {
+    font-style: italic;
+    color: var(--branco-principal);
+}
+
+.subtitulo {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.preco-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.preco {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Estilos da barra de navegação principal */
+.navegacao-principal {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.botao-nav {
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: var(--dourado-principal);
+    color: var(--vermelho-principal);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px var(--sombra-suave);
+}
+
+.botao-nav:hover {
+    background-color: #ffcc00;
+}
+
+/* Estilos das seções principais */
+.secao-principal {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    display: none; /* Inicialmente escondidas */
+}
+
+.secao-principal.active {
+    display: block; /* Mostra a seção ativa */
+}
+
+.secao-principal h2 {
+    color: var(--vermelho-principal);
+    font-size: 1.8em;
+    border-left: 5px solid var(--dourado-principal);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: var(--branco-principal);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 0 20px var(--sombra-suave);
+    margin-bottom: 30px;
+}
+
+/* Estilos do botão de compra */
+.comprar {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 8px var(--sombra-suave);
+}
+
+.comprar:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Estilos da lista de serviços */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Estilos do rodapé principal */
+.rodape-principal {
+    text-align: center;
+    padding: 30px;
+    background-color: #f2e2e2;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para a seção de depoimentos */
+.depoimento {
+    background-color: #f9f9f9;
+    border-left: 5px solid var(--dourado-principal);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px var(--sombra-suave);
+    font-style: italic;
+    color: #555;
+}
+
+.depoimento footer {
+    font-style: normal;
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Estilos para a seção de contato */
+.secao-principal#contato address {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.secao-principal#contato a {
+    color: var(--vermelho-principal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secao-principal#contato a:hover {
+    text-decoration: underline;
+}
